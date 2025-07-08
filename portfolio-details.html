@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="rami.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px;">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32">  
+  
+  <h1><b>Clustering project for the municipality of Breda</b></h1>
+
+  <!-- <p> The municipality of Breda has been examining the state of segregation and evaluating the 
+    effectiveness of its policies in combating this issue. Evidence suggests that segregation and social inequality between neighborhoods
+     have increased over the past decade. Leveraging the skills and knowledge I've gained
+     in my first year, I aim to create a data-driven example to cluster neighborhoods using machine learning method. This clustering will 
+     support the City of Breda in addressing and reducing rising segregation.</p> -->
+     <img src="pics/breda.png" class="bredapic">
+    
+
+</header>
+<!-- Grid -->
+<div>
+  
+</div>
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Data cleaning & EDA</b></h3>
+      <!-- <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5> -->
+    </div>
+
+    <div class="w3-container">
+      <p>
+        In the first part of our project, I downloaded raw data from various sources and conducted Exploratory Data Analysis (EDA) to gain insights into the dataset.<br>
+        I begin by importing the necessary libraries for data manipulation and visualization.
+        then I focus data cleaning, I carried out data cleaning tasks, including handling missing values, removing duplicates, and handling outliers.
+        then load the geospatial data into a GeoDataFrame, which allows us to handle geographic information efficiently.
+
+       </p>
+
+       <div class="w3-row">
+        <img src="pics/eda2.png" class="edapic">
+        <img src="pics/eda1.png" class="edapic">
+
+      </div>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <div class="image-container">
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Data cleaning & Pre-processing</b></h3>
+    </div>
+
+    <div class="w3-container">
+      <p>
+        I applied some of Pre-processing techniques, I applied Data Scaling using StandardScaler from Sklearn library,
+         to have zero mean and unit variance. which is crucial for the next step, 
+         Next step is applying PCA "Principal Component Analysis" its a typical process for dimensionality reduction,
+         lastly I applied Neares Neighbors, The Nearest Neighbors algorithm used to find the nearest neighbors of each data point in the PCA-transformed space.
+          This can help in clustering
+      </p>
+      <div class="w3-row">
+        <img src="pics/pre-prcoessing.png" class="bredapic">
+
+      </div>
+    </div>
+  </div>
+  <!-- Blog entry -->
+
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Clustering using Machine Learning</b></h3>
+      <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+      <p>
+
+      </p> -->
+    </div>
+
+    <div class="w3-container">
+      <p>In the final part, we apply machine learning techniques to uncover hidden patterns in our data. Using the PCA-transformed data, 
+        we start by finding the three closest neighbors for each data point using the Nearest Neighbors algorithm. This reveals the local structure of our dataset.
+
+        Next, we apply the DBSCAN clustering algorithm, which excels at identifying clusters of varying shapes and sizes.
+         DBSCAN groups similar neighborhoods based on their characteristics and identifies noise points that do not fit into any cluster.
+        
+        Finally, we identify vulnerable neighborhoods by comparing our clusters with a predefined list of socio-economically challenged neighborhoods.
+         We add a boolean column to our dataset to flag these vulnerable areas. This process transforms raw data into actionable insights,
+         revealing the hidden structure of Breda's neighborhoods and highlighting areas that may need targeted interventions.</p>
+         <img src="pics/plot.png" class="edapic">
+
+         <img src="pics/Dpscan-code.png" class="edapic">
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Check the notebook »</b></button></p>
+        </div>
+        <!-- <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <div class="w3-container w3-white">
+      <h4><b>Project About</b></h4>
+      <p>
+        The municipality of Breda examined the state of segregation in Breda and the extent to which Breda's
+         policy is effective in combating segregation in the city. There are several indications that segregation and social inequality between
+          neighborhoods have increased in the past 10 years. I will use the skills and knowledge I have gained over the course of the first
+         year to build an example of how to cluster the neighborhoods for the City of Breda to help combat rising segregation in a completely data-driven manner.</p>
+         
+         <div class="w3-row">
+    </div>
+  </div><hr>
+
+
+  
+  <!-- Posts -->
+  <!-- <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>DPSCAN example</h4>
+    </div> -->
+    <!-- <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lorem</span><br>
+        <span>Sed mattis nunc</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Dorum</span><br>
+        <span>Ultricies congue</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Mingsum</span><br>
+        <span>Lorem ipsum dipsum</span>
+      </li>  
+    </ul> -->
+  <!-- </div> -->
+
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>library and techniques used</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <!-- <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span> -->
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">numpy</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">pandas</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">matplotlib</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">seaborn</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">sklearn</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">PCA</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Nearest Neighbors</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Elbow method</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DPSCAN</span> 
+
+
+    </p>
+    </div>
+  </div>
+
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>DPSCAN example</h4>
+    </div>
+    <img src="pics/DPscan.png" class="edapic">
+    <!-- <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lorem</span><br>
+        <span>Sed mattis nunc</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Dorum</span><br>
+        <span>Ultricies congue</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Mingsum</span><br>
+        <span>Lorem ipsum dipsum</span>
+      </li>  
+    </ul> -->
+  </div>
+
+  <div class="w3-container w3-white">
+    <h4><b>Project duration</b></h4>
+    <p>
+      8 weeks
+       <div class="w3-row">
+  </div>
+</div><hr>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+
+</body>
+</html>
