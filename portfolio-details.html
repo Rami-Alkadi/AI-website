@@ -1,248 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="rami.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clustering Project - Breda</title>
+  <link rel="stylesheet" href="rami.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f5f5f5; color: #333; line-height: 1.6; scroll-behavior: smooth; }
+    .interactive-tag { background: #eee; border-radius: 20px; padding: 5px 15px; display: inline-block; margin: 5px; transition: 0.3s; }
+    .interactive-tag:hover { background: #4CAF50; color: white; transform: scale(1.1); }
+    .cta-button { transition: all 0.3s ease; border: 2px solid #4CAF50; background: white; color: #4CAF50; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .cta-button:hover { background: #4CAF50; color: white; transform: scale(1.05); }
+    .section { margin: 40px 0; }
+    .section img { max-width: 100%; border-radius: 10px; margin-bottom: 10px; }
+      /* Change background of Glightbox overlay */
+  .glightbox-clean .gcontainer {
+    background: #ffffffc0 !important;
+  }
+
+  /* Optional: also make overlay slightly transparent white */
+  .glightbox-clean .goverlay {
+    background: rgba(247, 245, 245, 0.733) !important;
+  }
 </style>
+  </style>
 </head>
-<body class="w3-light-grey">
+<body>
 
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px;">
+  <div class="w3-content" style="max-width:1200px; padding: 20px;">
+    <header class="w3-center" data-aos="fade-down">
+      <h1><b>Clustering Project for the Municipality of Breda</b></h1>
+      <img src="pics/breda.png" class="bredapic" alt="Breda Image" >
+    </header>
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32">  
-  
-  <h1><b>Clustering project for the municipality of Breda</b></h1>
+      <section class="section" data-aos="fade-up">
+      <p><a href="https://github.com/Rami-Alkadi/Ai-DataScience/tree/main" class="cta-button">🔎 Check the Full documentation in Github portfolio</a></p>
+    </section>
 
-  <!-- <p> The municipality of Breda has been examining the state of segregation and evaluating the 
-    effectiveness of its policies in combating this issue. Evidence suggests that segregation and social inequality between neighborhoods
-     have increased over the past decade. Leveraging the skills and knowledge I've gained
-     in my first year, I aim to create a data-driven example to cluster neighborhoods using machine learning method. This clustering will 
-     support the City of Breda in addressing and reducing rising segregation.</p> -->
-     <img src="pics/breda.png" class="bredapic">
-    
-
-</header>
-<!-- Grid -->
-<div>
-  
-</div>
-<div class="w3-row">
-
-<!-- Blog entries -->
-<div class="w3-col l8 s12">
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <div class="w3-container">
-      <h3><b>Data cleaning & EDA</b></h3>
-      <!-- <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5> -->
-    </div>
-
-    <div class="w3-container">
-      <p>
-        In the first part of our project, I downloaded raw data from various sources and conducted Exploratory Data Analysis (EDA) to gain insights into the dataset.<br>
-        I begin by importing the necessary libraries for data manipulation and visualization.
-        then I focus data cleaning, I carried out data cleaning tasks, including handling missing values, removing duplicates, and handling outliers.
-        then load the geospatial data into a GeoDataFrame, which allows us to handle geographic information efficiently.
-
-       </p>
-
-       <div class="w3-row">
-        <img src="pics/eda2.png" class="edapic">
-        <img src="pics/eda1.png" class="edapic">
-
-      </div>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <div class="image-container">
-        </div>
-
+    <section class="section" data-aos="fade-up" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+      <div style="flex: 2; min-width: 300px;">
+        <h2>🧹 Data Cleaning & EDA</h2>
+        <p>Raw datasets were collected from multiple sources and loaded into a GeoDataFrame. I conducted Exploratory Data Analysis (EDA) to identify patterns, handle missing values, outliers, and duplicates before continuing with the spatial clustering.</p>
+        <div class="w3-row" style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; flex-wrap: nowrap;">
+        <a href="pics/eda2.png" class="glightbox"><img src="pics/eda2.png" alt="EDA Image 1" style="max-width: 95%; height: auto;"></a>
+        <a href="pics/eda1.png" class="glightbox"><img src="pics/eda1.png" alt="EDA Image 2" style="max-width: 100%; height: 50%;"></a>
         </div>
       </div>
-    </div>
-  </div>
-  <hr>
-
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <div class="w3-container">
-      <h3><b>Data cleaning & Pre-processing</b></h3>
-    </div>
-
-    <div class="w3-container">
+    <aside style="flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); min-width: 260px;">
+      <h3><strong>Project About</strong></h3>
       <p>
-        I applied some of Pre-processing techniques, I applied Data Scaling using StandardScaler from Sklearn library,
-         to have zero mean and unit variance. which is crucial for the next step, 
-         Next step is applying PCA "Principal Component Analysis" its a typical process for dimensionality reduction,
-         lastly I applied Neares Neighbors, The Nearest Neighbors algorithm used to find the nearest neighbors of each data point in the PCA-transformed space.
-          This can help in clustering
+        The municipality of Breda examined the state of segregation in Breda and the extent to which Breda's policy is effective in combating segregation in the city. There are several indications that segregation and social inequality between neighborhoods have increased in the past 10 years. I will use the skills and knowledge I have gained over the course of the first year to build an example of how to cluster the neighborhoods for the City of Breda to help combat rising segregation in a completely data-driven manner.
       </p>
-      <div class="w3-row">
-        <img src="pics/pre-prcoessing.png" class="bredapic">
+    </aside>
+</section>
 
+    <section class="section" data-aos="fade-up">
+  <h2>⚙️ Data Preprocessing</h2>
+  <p>StandardScaler was used to scale the dataset to zero mean and unit variance. PCA was applied for dimensionality reduction, followed by Nearest Neighbors to understand spatial proximity for clustering readiness.</p>
+  <a href="pics/pre-prcoessing.png" class="glightbox"><img src="pics/pre-prcoessing.png" alt="Preprocessing"></a>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>📌 What is DBSCAN?</h2>
+  <p>DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is an unsupervised machine learning algorithm that groups together data points that are closely packed together, while marking outliers as noise. It does not require specifying the number of clusters in advance and works well for discovering clusters of arbitrary shape. DBSCAN requires two parameters: <code>eps</code> (maximum distance between two points in a cluster) and <code>min_samples</code> (minimum number of points required to form a dense region).</p>
+</section>
+
+    <section class="section" data-aos="fade-up" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+  <div style="flex: 2; min-width: 300px;">
+    <h2>🧠 Clustering using DBSCAN</h2>
+    <p>In the final stage, machine learning techniques are applied to uncover hidden patterns in the data. Using the PCA-transformed dataset, the three closest neighbors for each data point are determined using the Nearest Neighbors algorithm, revealing the local structure of the dataset. DBSCAN, a density-based clustering algorithm, is then used to group similar neighborhoods based on their characteristics and to identify noise points that do not fit into any cluster. Vulnerable neighborhoods are identified by comparing the resulting clusters with a predefined list of socio-economically challenged neighborhoods. A boolean column is added to the dataset to flag these vulnerable areas, transforming raw data into actionable insights and highlighting regions in Breda that may require targeted interventions.</p>
+    <div style="display: flex; gap: 20px; flex-wrap: nowrap; justify-content: center; align-items: center;">
+    <a href="pics/plot.png" class="glightbox"><img src="pics/plot.png" alt="Cluster Plot" style="max-width: 100%; height: auto;"></a>
+    <a href="pics/Dpscan-code.png" class="glightbox"><img src="pics/Dpscan-code.png" alt="DBSCAN Code" style="max-width: 100%; height: auto;"></a>
+    </div>
+    <p><a href="https://github.com/Rami-Alkadi/Ai-DataScience/blob/main/Clustring/D-DPSCAN.ipynb" class="cta-button">📓 View Full Notebook</a></p>
+  </div>
+  <aside style="flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(9, 163, 86, 0.1); min-width: 260px;">
+    <h3><strong>DBSCAN Example</strong></h3>
+    <a href="pics/DPscan.png" class="glightbox"><img src="pics/DPscan.png" alt="DBSCAN Example"></a> 
+
+
+  </aside>
+</section>
+
+  <section class="section" data-aos="fade-up">
+  <h2>📈 Outcome</h2>
+  <p>After applying DBSCAN and identifying vulnerable neighborhoods, I built a Power BI dashboard to visualize the results and enable interactive exploration.</p>
+  <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+  <figure style="flex: 1; min-width: 280px; max-width: 600px; text-align: center;">
+  <a href="pics/PowerBI-allData.png" class="glightbox"><img src="pics/PowerBI-allData.png" alt="Power BI dashboard overview" style="width: 100%; height: auto;"></a>
+  <figcaption style="margin-top: 6px; font-size: 0.9rem; color: #666;">Dashboard overview</figcaption>
+  </figure>
+  <figure style="flex: 1; min-width: 280px; max-width: 600px; text-align: center;">
+  <a href="pics/PowerBI-VlunerableData.png" class="glightbox"><img src="pics/PowerBI-VlunerableData.png" alt="Power BI vulnerable neighborhoods highlighted" style="width: 100%; height: auto;"></a>
+  <figcaption style="margin-top: 6px; font-size: 0.9rem; color: #666;">Vulnerable neighborhoods selected</figcaption>
+  </figure>
+  </div>
+  <p><a href="https://github.com/Rami-Alkadi/Ai-DataScience/blob/main/Clustring/Clustring.pbix" class="cta-button">🔎 Check the Power BI slide</a></p>
+  </section>
+
+    <section class="section" data-aos="fade-up">
+      <h2>📚 Libraries & Techniques</h2>
+      <div>
+        <span class="interactive-tag">numpy</span>
+        <span class="interactive-tag">pandas</span>
+        <span class="interactive-tag">matplotlib</span>
+        <span class="interactive-tag">seaborn</span>
+        <span class="interactive-tag">sklearn</span>
+        <span class="interactive-tag">PCA</span>
+        <span class="interactive-tag">Nearest Neighbors</span>
+        <span class="interactive-tag">DBSCAN</span>
+        <span class="interactive-tag">GeoDataFrame</span>
+        <span class="interactive-tag">Microsoft PowerBI</span>
       </div>
-    </div>
-  </div>
-  <!-- Blog entry -->
-
-  <div class="w3-card-4 w3-margin w3-white">
-    <div class="w3-container">
-      <h3><b>Clustering using Machine Learning</b></h3>
-      <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
-      <p>
-
-      </p> -->
-    </div>
-
-    <div class="w3-container">
-      <p>In the final part, we apply machine learning techniques to uncover hidden patterns in our data. Using the PCA-transformed data, 
-        we start by finding the three closest neighbors for each data point using the Nearest Neighbors algorithm. This reveals the local structure of our dataset.
-
-        Next, we apply the DBSCAN clustering algorithm, which excels at identifying clusters of varying shapes and sizes.
-         DBSCAN groups similar neighborhoods based on their characteristics and identifies noise points that do not fit into any cluster.
-        
-        Finally, we identify vulnerable neighborhoods by comparing our clusters with a predefined list of socio-economically challenged neighborhoods.
-         We add a boolean column to our dataset to flag these vulnerable areas. This process transforms raw data into actionable insights,
-         revealing the hidden structure of Breda's neighborhoods and highlighting areas that may need targeted interventions.</p>
-         <img src="pics/plot.png" class="edapic">
-
-         <img src="pics/Dpscan-code.png" class="edapic">
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Check the notebook »</b></button></p>
-        </div>
-        <!-- <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
-        </div> -->
-      </div>
-    </div>
-  </div>
-<!-- END BLOG ENTRIES -->
-</div>
-
-<!-- Introduction menu -->
-<div class="w3-col l4">
-  <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-    <div class="w3-container w3-white">
-      <h4><b>Project About</b></h4>
-      <p>
-        The municipality of Breda examined the state of segregation in Breda and the extent to which Breda's
-         policy is effective in combating segregation in the city. There are several indications that segregation and social inequality between
-          neighborhoods have increased in the past 10 years. I will use the skills and knowledge I have gained over the course of the first
-         year to build an example of how to cluster the neighborhoods for the City of Breda to help combat rising segregation in a completely data-driven manner.</p>
-         
-         <div class="w3-row">
-    </div>
-  </div><hr>
+    </section>
 
 
-  
-  <!-- Posts -->
-  <!-- <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>DPSCAN example</h4>
-    </div> -->
-    <!-- <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Lorem</span><br>
-        <span>Sed mattis nunc</span>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Ipsum</span><br>
-        <span>Praes tinci sed</span>
-      </li> 
-      <li class="w3-padding-16">
-        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Dorum</span><br>
-        <span>Ultricies congue</span>
-      </li>   
-      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Mingsum</span><br>
-        <span>Lorem ipsum dipsum</span>
-      </li>  
-    </ul> -->
-  <!-- </div> -->
-
- 
-  <!-- Labels / tags -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>library and techniques used</h4>
-    </div>
-    <div class="w3-container w3-white">
-    <!-- <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span> -->
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">numpy</span> 
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">pandas</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">matplotlib</span> 
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">seaborn</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">sklearn</span> 
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">PCA</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Nearest Neighbors</span> 
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Elbow method</span> 
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DPSCAN</span> 
-
-
-    </p>
-    </div>
   </div>
 
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>DPSCAN example</h4>
-    </div>
-    <img src="pics/DPscan.png" class="edapic">
-    <!-- <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Lorem</span><br>
-        <span>Sed mattis nunc</span>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Ipsum</span><br>
-        <span>Praes tinci sed</span>
-      </li> 
-      <li class="w3-padding-16">
-        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Dorum</span><br>
-        <span>Ultricies congue</span>
-      </li>   
-      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Mingsum</span><br>
-        <span>Lorem ipsum dipsum</span>
-      </li>  
-    </ul> -->
-  </div>
-
-  <div class="w3-container w3-white">
-    <h4><b>Project duration</b></h4>
-    <p>
-      8 weeks
-       <div class="w3-row">
-  </div>
-</div><hr>
-  
-<!-- END Introduction Menu -->
-</div>
-
-<!-- END GRID -->
-</div><br>
-
-<!-- END w3-content -->
-</div>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({ selector: '.glightbox' });
+  </script>
 
 </body>
 </html>
