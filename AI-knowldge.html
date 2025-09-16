@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrueLime – Generative AI Knowledge & Training</title>
+  <link rel="stylesheet" href="rami.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f5f5f5; color: #333; line-height: 1.6; scroll-behavior: smooth; }
+    .interactive-tag { background: #eee; border-radius: 20px; padding: 5px 15px; display: inline-block; margin: 5px; transition: 0.3s; }
+    .interactive-tag:hover { background: #4CAF50; color: white; transform: scale(1.1); }
+    .cta-button { transition: all 0.3s ease; border: 2px solid #4CAF50; background: white; color: #4CAF50; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .cta-button:hover { background: #4CAF50; color: white; transform: scale(1.05); }
+    .section { margin: 40px 0; }
+    .section img { max-width: 100%; border-radius: 10px; margin-bottom: 10px; }
+    /* Match Glightbox overlay to other project */
+    .glightbox-clean .gcontainer { background: #ffffffc0 !important; }
+    .glightbox-clean .goverlay { background: rgba(247, 245, 245, 0.733) !important; }
+  </style>
+</head>
+<body>
+
+  <div class="w3-content" style="max-width:1200px; padding: 20px;">
+    <!-- Header -->
+    <header class="w3-center" data-aos="fade-down">
+      <h1><b>Generative AI Knowledge & Training Automation</b></h1>
+      <img src="pics/project-image.webp" style="max-width: 45%; height: auto;" class="bredapic" alt="Project cover" >
+    </header>
+
+    <!-- CTA / Links -->
+    <section class="section" data-aos="fade-up">
+      <p>
+        <a href="https://github.com/Rami-Alkadi/Ai-DataScience" class="cta-button">🔎 Check the Full documentation in Github portfolio</a>
+        <!-- <a href="#outputs" class="cta-button">🎬 See generated outputs</a>
+        <a href="#pipeline" class="cta-button" style="margin-left:10px">🔧 View the pipeline</a> -->
+      </p>
+    </section>
+
+    
+
+    <!-- Intro + Aside -->
+    <section class="section" data-aos="fade-up" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+      <div style="flex: 2; min-width: 300px;">
+        <h2>🤖 AI Interview Chatbot</h2>
+        <p>
+          I built a <b>GPT‑powered interview assistant</b> that conducts expert interviews, <b>captures answers in real time</b> via Azure Speech‑to‑Text, and <b>responds contextually</b> to guide the conversation. Each turn is timestamped and persisted for downstream generation.
+        </p>
+        <div class="w3-row" style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; flex-wrap: nowrap;">
+          <a href="pics/AI-Knowldge-pics/flowchart.png" class="glightbox"><img src="pics/AI-Knowldge-pics/flowchart.png" alt="Notion summary" style="max-width: 95%; height: auto;"></a>
+              <!-- <video controls style="max-width: 65%; height: auto; border-radius: 10px;">
+            <source src="pics/AI-Knowldge-pics/Demo.mp4" type="video/mp4">
+            
+        </video> -->
+
+        </div>
+      </div>
+      <aside style="flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); min-width: 260px;">
+        <h3><strong>challenge</strong></h3>
+        <p>
+            TrueLime faced a <b>knowledge retention and onboarding challenge</b>. Critical expertise was locked inside senior developers’ heads, while new joiners often struggled to ramp up quickly. Traditional documentation was time‑consuming to create, quickly outdated, and not engaging enough to ensure adoption.
+        </p>
+               <h3><strong>Solution</strong></h3>
+        <p>
+            I developed a <b>GenAI Interview Chatbot</b> that captures expert knowledge through conversational interviews and instantly transforms it into <b>structured, engaging, and multimodal training content</b>. By automating the flow from capture → structure → generation, I drastically reduced the time needed to convert expert input into usable learning resources.
+          </p>        
+      </aside>
+
+
+    </section>
+
+    
+
+    <!-- Pipeline -->
+    <section id="pipeline" class="section" data-aos="fade-up">
+      <h2>🧩 Generative AI Pipeline</h2>
+      <section class="section" data-aos="fade-up" style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 260px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3>1) Capture</h3>
+          <p>Record audio, diarize speakers, and persist raw + cleaned transcripts with timestamps and metadata.</p>
+          <div>
+            <span class="interactive-tag">Azure STT/TTS</span>
+            <span class="interactive-tag">WAV/JSON</span>
+          </div>
+        </div>
+        <div style="flex: 1; min-width: 260px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3>2) Structure</h3>
+          <p>Prompt‑engineered GPT converts answers into structured JSON: overview, FAQs, key decisions, glossary, tech stack.</p>
+          <div>
+            <span class="interactive-tag">OpenAI GPT‑4</span>
+            <span class="interactive-tag">Prompt Engineering</span>
+          </div>
+        </div>
+        <div style="flex: 1; min-width: 260px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h3>3) Generate</h3>
+          <p>Create Notion pages, MCQ quizzes, podcast audio and training video scripts, then render avatar videos.</p>
+          <div>
+            <span class="interactive-tag">Notion API</span>
+            <span class="interactive-tag">Vue/JS Quiz</span>
+            <span class="interactive-tag">D‑ID</span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Outputs -->
+<section id="outputs" class="section" data-aos="fade-up">
+  <h2>🎛️ Outputs</h2>
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; justify-items: center; align-items: flex-start;">
+    
+    <figure style="text-align: center;">
+      <a href="pics/AI-Knowldge-pics/notion.png" class="glightbox">
+        <img src="pics/AI-Knowldge-pics/notion.png" alt="Structured Summary (Notion)" style="width: 80%; max-width: 500px; height: auto;">
+      </a>
+      <figcaption style="margin-top: 3px; font-size: 0.9rem; color: #666;">
+        Structured Summary (Notion) – for full notion summary click 
+        <a href="https://tough-literature-d5c.notion.site/Technical-Interview-with-a-Software-Tester-at-X-Company-20d87f2a05868156af44ec88ef166d32">here</a>
+      </figcaption>
+    </figure>
+
+    <figure style="text-align: center;">
+      <a href="pics/AI-Knowldge-pics/quiz.png" class="glightbox">
+        <img src="pics/AI-Knowldge-pics/quiz.png" alt="Interactive Quiz" style="width: 80%; max-width: 500px; height: auto;">
+      </a>
+      <figcaption style="margin-top: 6px; font-size: 0.9rem; color: #666;">Interactive Quiz</figcaption>
+    </figure>
+
+    <figure style="text-align: center;">
+      <audio controls style= "width: 200%; border-radius: 10px ; margin-top: 65px; margin-right: 20px;">
+
+        <source src="pics/AI-Knowldge-pics/Media1.wav" type="audio/wav">
+      </audio>
+      <figcaption style="margin-top: 6px; font-size: 0.9rem; color: #666;">Merged Podcast</figcaption>
+    </figure>
+
+    <figure style="text-align: center;">
+      <video controls style="width: 80%; max-width: 500px; border-radius: 10px;">
+        <source src="pics/AI-Knowldge-pics/did-video.mp4" type="video/mp4">
+      </video>
+      <figcaption style="margin-top: 6px; font-size: 0.9rem; color: #666;">Training Video (Avatar)</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+
+<!-- Trust, Privacy & Governance -->
+<section id="trust" class="section" data-aos="fade-up">
+  <h2>🔐 Trust, Privacy & Governance</h2>
+
+  <!-- Two cards side-by-side like the rest -->
+  <div style="display: flex; gap: 40px; align-items: stretch; flex-wrap: wrap;">
+
+    <!-- Frameworks -->
+    <div style="flex: 1; min-width: 260px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      <h3>Frameworks</h3>
+      <ul>
+        <li><b>ALTAI</b> – trustworthy AI checklist & human oversight.</li>
+        <li><b>FAIR</b> – findable, accessible, interoperable, reusable assets.</li>
+        <li><b>GDPR</b> – consent, minimization, secure storage, retention policy.</li>
+        <li><b>DEDA</b> – data ethics mapping, access control, anonymization.</li>
+      </ul>
+      <div style="margin-top:8px;">
+        <span class="interactive-tag">ALTAI</span>
+        <span class="interactive-tag">FAIR</span>
+        <span class="interactive-tag">GDPR</span>
+        <span class="interactive-tag">DEDA</span>
+      </div>
+    </div>
+
+    <!-- Risks & mitigations -->
+    <div style="flex: 1; min-width: 260px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      <h3>Risks & mitigations</h3>
+      <ul>
+        <li><b>Model hallucinations</b> ⇒ human validation & versioned summaries.</li>
+        <li><b>STT transcription errors</b> ⇒ post-interview review & corrections.</li>
+        <li><b>Data leakage</b> ⇒ encrypted SharePoint, role-based access, limited retention.</li>
+      </ul>
+      <div style="margin-top:8px;">
+        <span class="interactive-tag">Human-in-the-loop</span>
+        <span class="interactive-tag">Versioning</span>
+        <span class="interactive-tag">Encryption</span>
+        <span class="interactive-tag">RBAC</span>
+        <span class="interactive-tag">Retention policy</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+        <section class="section" data-aos="fade-up">
+      <h2>Full Project demo</h2>
+      <div>
+        <video controls style="max-width: 65%; height: auto; border-radius: 10px;">
+            <source src="pics/AI-Knowldge-pics/Demo.mp4" type="video/mp4">
+            
+        </video>
+      </div>
+    </section>
+
+        <!-- Libraries & Techniques -->
+    <section class="section" data-aos="fade-up">
+      <h2>📚 Libraries & Techniques</h2>
+      <div>
+        <span class="interactive-tag">Python</span>
+        <span class="interactive-tag">OpenAI GPT‑3.5 / GPT‑4</span>
+        <span class="interactive-tag">Azure Speech (STT/TTS)</span>
+        <span class="interactive-tag">Notion API</span>
+        <span class="interactive-tag">Vue / JavaScript (Quizzes)</span>
+        <span class="interactive-tag">D‑ID (Training videos)</span>
+        <span class="interactive-tag">SharePoint</span>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>const lightbox = GLightbox({ selector: '.glightbox' });</script>
+</body>
+</html>
